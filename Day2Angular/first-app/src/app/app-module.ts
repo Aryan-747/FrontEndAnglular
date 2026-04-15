@@ -9,6 +9,6 @@ import { Student } from './student/student';
   declarations: [App, Student],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
-  bootstrap: [Student],
+  bootstrap: [App,Student],
 })
 export class AppModule {}
