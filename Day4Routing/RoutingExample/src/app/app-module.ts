@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { RouterModule } from '@angular/router';
     NavigationComponent,
     ProductComponent,
     ContactComponent,
+    PipeExampleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [provideBrowserGlobalErrorListeners()],
-  bootstrap: [App]
+  bootstrap: [App],
 })
 export class AppModule {}
