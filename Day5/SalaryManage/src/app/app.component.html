@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Salary Management</h2>
+
+  <label>Enter Salary:</label>
+  <input type="number" [(ngModel)]="salary" placeholder="Enter salary">
+
+  <br><br>
+
+  <button (click)="calculateBonus()">Calculate Bonus</button>
+
+  <h3 *ngIf="bonus > 0">
+    Bonus (10%): ₹{{ bonus }}
+  </h3>
+</div>
