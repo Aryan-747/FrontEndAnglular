@@ -1,0 +1,45 @@
+<div class="card shadow border-0">
+  <div class="card-header bg-primary text-white">
+    <h4 class="mb-0">📦 Orders List</h4>
+  </div>
+
+  <div class="card-body">
+    <table class="table table-hover align-middle text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td class="fw-bold">{{ order.id }}</td>
+          <td>{{ order.product }}</td>
+
+          <td class="text-success fw-semibold">
+            {{ order.price | currency:'INR' }}
+          </td>
+
+          <td>{{ order.date | date:'mediumDate' }}</td>
+
+          <td>
+            <span 
+              class="badge"
+              [ngClass]="{
+                'bg-warning text-dark': order.status == 1,
+                'bg-info text-dark': order.status == 2,
+                'bg-success': order.status == 3
+              }"
+            >
+              {{ order.status | orderStatus }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background: #f5f7fa;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+}
