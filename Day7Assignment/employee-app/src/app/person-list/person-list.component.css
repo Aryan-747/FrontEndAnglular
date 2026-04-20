@@ -1,0 +1,41 @@
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+.card {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  color: #333;
+}
+
+/* Developer */
+.dev {
+  background-color: #e3f2fd;
+  border-left: 6px solid #2196f3;
+}
+
+/* Manager */
+.mgr {
+  background-color: #e8f5e9;
+  border-left: 6px solid #4caf50;
+}
+
+/* Tester */
+.tester {
+  background-color: #fff3e0;
+  border-left: 6px solid #ff9800;
+}
+
+/* HR */
+.hr {
+  background-color: #fce4ec;
+  border-left: 6px solid #e91e63;
+}
+
+/* Default case */
+.no-desc {
+  color: red;
+  font-weight: bold;
+}

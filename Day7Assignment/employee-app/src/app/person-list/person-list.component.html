@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Employee List</h2>
+
+  <div *ngFor="let person of persons" class="card"
+       [ngClass]="{
+         'dev': person.profession === 'developer',
+         'mgr': person.profession === 'manager',
+         'tester': person.profession === 'tester',
+         'hr': person.profession === 'hr'
+       }">
+
+    <h3>{{ person.name }}</h3>
+    <p><b>DOJ:</b> {{ person.doj }}</p>
+    <p><b>Salary:</b> ₹{{ person.salary }}</p>
+    <p><b>Profession:</b> {{ person.profession }}</p>
+
+    <!-- SWITCH -->
+    <div [ngSwitch]="person.profession">
+
+      <p *ngSwitchCase="'developer'">
+        Writes and maintains application code.
+      </p>
+
+      <p *ngSwitchCase="'manager'">
+        Manages team and projects.
+      </p>
+
+      <p *ngSwitchCase="'tester'">
+        Tests software for bugs and quality.
+      </p>
+
+      <p *ngSwitchCase="'hr'">
+        Handles hiring and employee relations.
+      </p>
+
+      <p *ngSwitchDefault class="no-desc">
+        no description available
+      </p>
+
+    </div>
+
+  </div>
+</div>
